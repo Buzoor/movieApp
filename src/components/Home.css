@@ -1,0 +1,85 @@
+/* src/components/Home.css */
+
+.home-container {
+    padding: 20px;
+}
+
+.error-message {
+    color: red;
+}
+
+.card {
+    width: 70%;
+    margin: auto;
+    /* padding: 2em; */
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-columns: minmax(100px, auto);
+    gap: 30px;
+}
+
+.movie-card {
+    /* background-color: #f0dada; */
+    /* padding: px; */
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.movie-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.features {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: nowrap; */
+    justify-content: space-between;
+    margin: auto;
+    padding: 0%;
+    align-items: center;
+    margin-top: -4em;
+}
+
+.features h1 {
+    font-size: 2em;
+}
+
+.features img {
+    width: 80%;
+}
+
+@media (max-width: 768px) {
+    .home-container {
+        width: 90%;
+        /* Increase width for better readability on mobile */
+    }
+
+    .movie-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* Two columns on mobile */
+        gap: 20px;
+        /* Reduce gap for mobile */
+    }
+
+    .features {
+        margin-top: 0;
+        /* Remove negative margin-top */
+    }
+
+    .features h1 {
+        font-size: 16px;
+        /* Decrease font size for mobile */
+    }
+
+    .features img {
+        max-width: 80%;
+        /* Allow images to take full width on mobile */
+    }
+}
